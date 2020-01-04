@@ -1,14 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="@dimen/margin_default"
+    android:paddingRight="@dimen/margin_default"
     tools:context=".ui.awareness.Awareness">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/txtAwareTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="AWARENESS" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:background="@drawable/ic_aware_ribbon"
+        android:text="@string/awareness_aware"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="12dp" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imgApple"
+        android:layout_width="101dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="@dimen/margin_LgPadding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAwareTitle"
+        app:srcCompat="@drawable/ic_aware_apple" />
+
+    <!--<TextView
+        android:id="@+id/txtIntro"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/margin_padding"
+        android:layout_marginRight="15dp"
+        android:background="#AA583B"
+        android:text="@string/awareness_intro"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAwareTitle" />-->
+
+    <ImageView
+        android:id="@+id/imgBGboard"
+        android:layout_width="237dp"
+        android:layout_height="157dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgApple"
+        app:layout_constraintTop_toBottomOf="@+id/txtAwareTitle"
+        app:srcCompat="@drawable/ic_aware_board" />
+
+    <TextView
+        android:id="@+id/txtIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="28dp"
+        android:text="@string/awareness_intro"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/imgBGboard"
+        app:layout_constraintTop_toTopOf="@+id/imgBGboard" />
+
+
+
+    <View
+        android:id="@+id/dividerAware1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd= "24dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/importanceLogo"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@android:color/transparent"
+        android:contentDescription="environment importance"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dividerAware1"
+        app:srcCompat="@drawable/ic_aware_diamond" />
+
+    <TextView
+        android:id="@+id/txtImportance"
+        android:layout_width="90dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:text="@string/awareness_importance"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/subTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/importanceLogo" />
+
+    <ImageButton
+        android:id="@+id/issueLogo"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/margin_default"
+        android:background="@android:color/transparent"
+        android:contentDescription="environment issues, earth sick logo"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/protectLogo"
+        app:layout_constraintStart_toEndOf="@+id/importanceLogo"
+        app:layout_constraintTop_toTopOf="@+id/dividerAware1"
+        app:srcCompat="@drawable/ic_aware_earthsick" />
+
+    <TextView
+        android:id="@+id/txtIssue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/awareness_issue"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/subTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/issueLogo" />
+
+    <ImageButton
+        android:id="@+id/protectLogo"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@android:color/transparent"
+        android:contentDescription="love tree logo , ways to protect env"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dividerAware1"
+        app:srcCompat="@drawable/ic_aware_lovetree" />
+
+    <TextView
+        android:id="@+id/txtProtect"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:text="@string/awareness_protect"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/subTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/protectLogo" />
+
+    <ImageButton
+        android:id="@+id/habitLogo"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Good habit logo"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerAware1"
+        app:srcCompat="@drawable/ic_aware_habit" />
+
+    <TextView
+        android:id="@+id/txtHabit"
+        android:layout_width="106dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/awareness_habit"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/subTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerAware1" />
+
+    <ImageButton
+        android:id="@+id/quizLogo"
+        android:layout_width="94dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="155dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="quiz logo"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/plantTreeLogo"
+        app:layout_constraintStart_toEndOf="@+id/habitLogo"
+        app:layout_constraintTop_toBottomOf="@+id/dividerAware1" />
+    <!--app:srcCompat="@drawable/ic_home_quizcroplogo" -->
+
+    <TextView
+        android:id="@+id/txtQuiz"
+        android:layout_width="75dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/subTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizLogo" />
+    <!--android:text="@string/menu_quiz"-->
+
+    <ImageButton
+        android:id="@+id/plantTreeLogo"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@android:color/transparent"
+        android:contentDescription="plant tree logo"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerAware1" />
+    <!--app:srcCompat="@drawable/ic_home_plantlogo" -->
+
+    <TextView
+        android:id="@+id/txtPlanttree"
+        android:layout_width="55dp"
+        android:layout_height="37dp"
+        android:layout_marginStart= "44dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="@dimen/margin_default"
+
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/subTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerAware1" />
+
+    <!--android:text="@string/menu_plant"-->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

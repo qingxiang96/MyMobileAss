@@ -173,7 +173,7 @@
             android:id="@+id/organizationLogo"
             android:layout_width="64dp"
             android:layout_height="60dp"
-            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="150dp"
             android:layout_marginEnd="40dp"
             android:background="@android:color/transparent"
@@ -263,17 +263,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@color/colorAccent"
-            tools:layout_editor_absoluteX="278dp"
-            tools:layout_editor_absoluteY="422dp"
-            app:layout_constraintHorizontal_bias="0.375"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+        <!--<ImageView
+            android:id="@+id/imgGreenEarth"
+            android:layout_width="133dp"
+            android:layout_height="264dp"
+            android:layout_marginEnd="@dimen/margin_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            app:srcCompat="@drawable/ic_home_gogreen" /> -->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

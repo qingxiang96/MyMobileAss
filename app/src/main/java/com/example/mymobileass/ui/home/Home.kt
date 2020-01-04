@@ -33,6 +33,51 @@ class Home : Fragment()  {
         binding.navAwareness.setOnClickListener{
             this.findNavController().navigate(R.id.action_nav_home_to_nav_awareness)
         }
+
+        binding.newsLogo.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_news)
+        }
+
+        binding.coverageLogo.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_coverage)
+        }
+
+        binding.organizationLogo.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_org)
+        }
+
+        binding.quizLogo.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_quiz)
+        }
+
+        binding.plantTreeLogo.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_plant2)
+        }
+
+        binding.envAwareness.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_awareness)
+        }
+
+        binding.txtNews.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_news)
+        }
+
+        binding.txtCoverage.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_coverage)
+        }
+
+        binding.txtOrganization.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_org)
+        }
+
+        binding.txtQuiz.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_quiz)
+        }
+
+        binding.txtPlanttree.setOnClickListener{
+            this.findNavController().navigate(R.id.action_nav_home_to_nav_plant2)
+        }
+
         return binding.root
     }
 

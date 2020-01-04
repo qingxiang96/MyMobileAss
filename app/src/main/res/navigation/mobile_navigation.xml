@@ -42,37 +42,37 @@
     <fragment
         android:id="@+id/nav_awareness"
         android:name="com.example.mymobileass.ui.awareness.Awareness"
-        android:label="fragment_awareness"
+        android:label="@string/menu_aware"
         tools:layout="@layout/fragment_awareness" />
 
     <fragment
         android:id="@+id/nav_news"
         android:name="com.example.mymobileass.ui.news.News"
-        android:label="fragment_news"
+        android:label="@string/menu_news"
         tools:layout="@layout/fragment_news" />
 
     <fragment
         android:id="@+id/nav_coverage"
         android:name="com.example.mymobileass.ui.coverage.Coverage"
-        android:label="fragment_coverage"
+        android:label="@string/menu_coverage"
         tools:layout="@layout/fragment_coverage" />
 
     <fragment
         android:id="@+id/nav_org"
         android:name="com.example.mymobileass.ui.organization.Organization"
-        android:label="fragment_organization"
+        android:label="@string/menu_org"
         tools:layout="@layout/fragment_organization" />
 
     <fragment
         android:id="@+id/nav_quiz"
         android:name="com.example.mymobileass.ui.quiz.Quiz"
-        android:label="fragment_quiz"
+        android:label="@string/menu_quiz"
         tools:layout="@layout/fragment_quiz" />
 
     <fragment
         android:id="@+id/nav_plant"
         android:name="com.example.mymobileass.ui.plant.Plant"
-        android:label="fragment_plant"
+        android:label="@string/menu_plant"
         tools:layout="@layout/fragment_plant" />
 
 </navigation>

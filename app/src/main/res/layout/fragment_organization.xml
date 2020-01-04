@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_default"
+    android:paddingRight="@dimen/margin_default"
     tools:context=".ui.organization.Organization">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/txtTitleOrg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ORGANIZATION" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/org_title"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="30dp" />
 
-</FrameLayout>
+    <ListView
+        android:id="@+id/listViewOrg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
