@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mymobileass.ui.home.Home"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_awareness"
+            app:destination="@id/nav_awareness" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_org"
+            app:destination="@id/nav_org" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_plant2"
+            app:destination="@id/nav_plant" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_login"
+            app:destination="@id/nav_login" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_news"
+            app:destination="@id/nav_news" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_quiz"
+            app:destination="@id/nav_quiz" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_coverage"
+            app:destination="@id/nav_coverage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.mymobileass.ui.login.Login"
+        android:label="@string/menu_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_awareness"
+        android:name="com.example.mymobileass.ui.awareness.Awareness"
+        android:label="fragment_awareness"
+        tools:layout="@layout/fragment_awareness" />
+
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.example.mymobileass.ui.news.News"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+        android:id="@+id/nav_coverage"
+        android:name="com.example.mymobileass.ui.coverage.Coverage"
+        android:label="fragment_coverage"
+        tools:layout="@layout/fragment_coverage" />
+
+    <fragment
+        android:id="@+id/nav_org"
+        android:name="com.example.mymobileass.ui.organization.Organization"
+        android:label="fragment_organization"
+        tools:layout="@layout/fragment_organization" />
+
+    <fragment
+        android:id="@+id/nav_quiz"
+        android:name="com.example.mymobileass.ui.quiz.Quiz"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
+
+    <fragment
+        android:id="@+id/nav_plant"
+        android:name="com.example.mymobileass.ui.plant.Plant"
+        android:label="fragment_plant"
+        tools:layout="@layout/fragment_plant" />
+
+</navigation>
