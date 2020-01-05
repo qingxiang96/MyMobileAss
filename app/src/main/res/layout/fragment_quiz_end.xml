@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.quiz.QuizEnd">
+
+    <data>
+        <variable
+            name="quizEnd"
+            type="com.example.mymobileass.ui.quiz.QuizEnd" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/quiz_main_background">
+
+        <ImageView
+            android:id="@+id/imgEndBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="75dp"
+            android:src="@drawable/quiz_answer_list_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+
+        <ImageView
+            android:id="@+id/imgQuizEnd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="475dp"
+            android:src="@drawable/ic_aware_apple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnNewQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/quizNewQuizBtnStyle"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="New Quiz"
+            android:textColor="#324ADD"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgEndBg"
+            app:layout_constraintStart_toStartOf="@+id/imgEndBg"
+            app:layout_constraintTop_toBottomOf="@+id/txtScore" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/copse"
+            android:text="@{quizEnd.endTitle}"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgQuizEnd"
+            app:lineHeight="45sp"
+            tools:text="Not Bad!" />
+
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="@{quizEnd.result}"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/imgEndBg"
+            app:layout_constraintStart_toStartOf="@+id/imgEndBg"
+            app:layout_constraintTop_toTopOf="@+id/imgEndBg"
+            app:lineHeight="30sp"
+            tools:text="You answered\n3 out of 6\ncorrectly." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

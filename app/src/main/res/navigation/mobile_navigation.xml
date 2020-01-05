@@ -71,6 +71,11 @@
         <action
             android:id="@+id/action_nav_quiz_to_nav_home"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_quiz_to_quiz_end"
+            app:destination="@id/nav_quiz_end"
+            app:popUpTo="@+id/nav_quiz"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -78,5 +83,19 @@
         android:name="com.example.mymobileass.ui.plant.Plant"
         android:label="@string/menu_plant"
         tools:layout="@layout/fragment_plant" />
+    <fragment
+        android:id="@+id/nav_quiz_end"
+        android:name="com.example.mymobileass.ui.quiz.QuizEnd"
+        android:label="fragment_quiz_end"
+        tools:layout="@layout/fragment_quiz_end" >
+        <action
+            android:id="@+id/action_quiz_end_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_quiz_end_to_nav_quiz"
+            app:destination="@id/nav_quiz"
+            app:popUpTo="@+id/nav_home"
+            app:popUpToInclusive="false" />
+    </fragment>
 
 </navigation>

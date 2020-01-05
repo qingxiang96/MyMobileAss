@@ -13,111 +13,162 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/quiz_main_background"
         >
+
         <ImageView
             android:id="@+id/imgQuest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="76dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="525dp"
             android:src="@drawable/ic_aware_apple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio=""
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txtQuest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="176dp"
-            android:layout_marginTop="64dp"
-            android:text="@{quiz.currentQuestion.quest}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgQuest"
-            tools:text="asd" />
-
-        <Button
-            android:id="@+id/btnAnsw1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="56dp"
-            android:text="@{quiz.answ[0]}"
+        <ImageView
+            android:id="@+id/imgBgAnswer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/quiz_answer_list_background"
+            app:layout_constraintBottom_toTopOf="@+id/txtInfo"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtQuest" />
 
-        <Button
-            android:id="@+id/btnAnsw2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="76dp"
-            android:text="Button"
-            app:layout_constraintStart_toEndOf="@+id/btnAnsw1"
-            app:layout_constraintTop_toTopOf="@+id/btnAnsw1" />
-
-        <Button
-            android:id="@+id/btnAnsw3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="48dp"
-            android:text="Button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAnsw1" />
-
-        <Button
-            android:id="@+id/btnAnsw4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="60dp"
-            android:text="Button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAnsw2" />
-
-        <RadioGroup
-            android:id="@+id/radGrpAnsw"
-            android:layout_width="225dp"
-            android:layout_height="115dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            app:layout_constraintStart_toEndOf="@+id/btnConfirm"
-            app:layout_constraintTop_toBottomOf="@+id/btnAnsw4">
-
-            <RadioButton
-                android:id="@+id/radAnsw1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="RadioButton" />
-
-            <RadioButton
-                android:id="@+id/radAnsw2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="RadioButton" />
-
-            <RadioButton
-                android:id="@+id/radAnsw3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="RadioButton" />
-
-            <RadioButton
-                android:id="@+id/radAnsw4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="RadioButton" />
-        </RadioGroup>
-
+        <!--   Button Confirm   -->
         <Button
             android:id="@+id/btnConfirm"
+            style="@style/quizConfirmBtnStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="92dp"
-            android:text="Button"
+            android:layout_marginBottom="45dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Confirm"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--   Button Answer 1   -->
+        <Button
+            android:id="@+id/btnAnsw1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@{quiz.currentAnswList[0]}"
+            android:textSize="18sp"
+            style="@style/quizAnswBtnStyle"
+            app:layout_constraintBottom_toTopOf="@id/btnAnsw3"
+            app:layout_constraintEnd_toStartOf="@id/btnAnsw2"
+            app:layout_constraintStart_toStartOf="@+id/imgBgAnswer"
+            app:layout_constraintTop_toTopOf="@+id/imgBgAnswer"
+            tools:text="The layer of protective gases that shields the earth from harmful radiation." />
+
+        <!--   Button Answer 2   -->
+        <Button
+            android:id="@+id/btnAnsw2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@{quiz.currentAnswList[1]}"
+            android:textSize="18sp"
+            style="@style/quizAnswBtnStyle"
+            app:layout_constraintBottom_toTopOf="@id/btnAnsw4"
+            app:layout_constraintEnd_toEndOf="@+id/imgBgAnswer"
+            app:layout_constraintStart_toEndOf="@+id/btnAnsw1"
+            app:layout_constraintTop_toTopOf="@id/imgBgAnswer"
+            tools:text="Only by natural factors." />
+
+        <!--   Button Answer 3   -->
+        <Button
+            android:id="@+id/btnAnsw3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@{quiz.currentAnswList[2]}"
+            android:textSize="18sp"
+            style="@style/quizAnswBtnStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgBgAnswer"
+            app:layout_constraintEnd_toStartOf="@id/btnAnsw4"
+            app:layout_constraintStart_toStartOf="@+id/imgBgAnswer"
+            app:layout_constraintTop_toBottomOf="@+id/btnAnsw1"
+            tools:text="Mainly by natural factors." />
+
+        <!--   Button Answer 4   -->
+        <Button
+            android:id="@+id/btnAnsw4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@{quiz.currentAnswList[3]}"
+            android:textSize="18sp"
+            style="@style/quizAnswBtnStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgBgAnswer"
+            app:layout_constraintEnd_toEndOf="@+id/imgBgAnswer"
+            app:layout_constraintStart_toEndOf="@id/btnAnsw3"
+            app:layout_constraintTop_toBottomOf="@+id/btnAnsw2"
+            tools:text="Both by human and natural factors." />
+
+        <TextView
+            android:id="@+id/txtQuest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/copse"
+            android:text="@{quiz.currentQuest.questGiven}"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAnsw3" />
+            app:layout_constraintTop_toBottomOf="@+id/imgQuest"
+            app:lineHeight="24sp"
+            tools:text="Consequence of global warming." />
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/allerta"
+            android:text=""
+            android:textColor="#4B4B4B"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnConfirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lineHeight="20sp"
+            tools:text="Volunteers for the International Coastal Cleanup removed nearly two million cigarettes and cigarette filters in their most recent effort to clear litter from the world's oceans." />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

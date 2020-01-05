@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="quiz_confirmBtn_color">#87FD64</color>
+    <color name="quiz_newQuizBtn_color">#16E774</color>
+    <color name="quiz_btn_wait">#26FFC107</color>
+    <color name="quiz_btn_select">#8029F7E1</color>
+    <color name="quiz_btn_wrong">#73FF0000</color>
+    <color name="quiz_btn_right">#8029F72C</color>
+
 </resources>
