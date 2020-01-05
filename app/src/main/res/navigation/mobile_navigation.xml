@@ -67,7 +67,11 @@
         android:id="@+id/nav_quiz"
         android:name="com.example.mymobileass.ui.quiz.Quiz"
         android:label="@string/menu_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_nav_quiz_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_plant"
